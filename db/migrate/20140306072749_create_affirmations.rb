@@ -7,5 +7,7 @@ class CreateAffirmations < ActiveRecord::Migration
 
       t.timestamps
     end
+
+    add_index :affirmations, %i(affirmer_id goal_id)
   end
 end

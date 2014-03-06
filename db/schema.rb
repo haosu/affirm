@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20140306072749) do
     t.datetime "updated_at"
   end
 
+  add_index "affirmations", ["affirmer_id", "goal_id"], name: "index_affirmations_on_affirmer_id_and_goal_id", using: :btree
+
   create_table "goals", force: true do |t|
     t.integer  "owner_id",                  null: false
     t.string   "name",                      null: false
