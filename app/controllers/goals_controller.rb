@@ -27,7 +27,11 @@ class GoalsController < ApplicationController
   end
 
   def update
-    render 'edit'
+    if @goal.update(goal_params)
+      redirect_to @goal
+    else
+      render 'edit'
+    end
   end
 
   def destroy
