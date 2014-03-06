@@ -1,6 +1,5 @@
 class GoalsController < ApplicationController
-  before_filter :authenticate_user!
-  before_filter :set_goal, except: %i(index create)
+  before_filter :set_goal, except: %i(index create new)
 
   def index
   end
@@ -9,6 +8,7 @@ class GoalsController < ApplicationController
   end
 
   def new
+    @goal = Goal.new
   end
 
   def create
@@ -40,15 +40,6 @@ class GoalsController < ApplicationController
   end
 
 private
-
-  def set_goal
-    @goal =
-      if id = params[:id]
-        Goal.find(id)
-      else
-        Goal.new
-      end
-  end
 
   def goal_params
     params.require(:goal).permit(:name, :reason, :critical_mass)

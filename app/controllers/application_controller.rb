@@ -6,11 +6,16 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-  private
+  before_filter :authenticate_user!
+
+private
 
   def user_not_authorized
     flash[:alert] = "Access denied."
     redirect_to (request.referrer || root_path)
   end
 
+  def set_goal(param_key = :id)
+    @goal = Goal.find(params[param_key])
+  end
 end

@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   layout 'public'
 
+  skip_before_filter :authenticate_user!
   before_filter :redirect_to_goals
 
   def index
