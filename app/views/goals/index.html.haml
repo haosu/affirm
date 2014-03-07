@@ -1,2 +1,5 @@
-%h1 Goals#index
-%p Find me in app/views/goals/index.html.haml
+= render 'goals/form', goal: Goal.new
+
+%div
+  - @goals.each do |goal|
+    = render 'goals/show', goal: goal

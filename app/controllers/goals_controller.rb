@@ -2,6 +2,7 @@ class GoalsController < ApplicationController
   before_filter :set_goal, except: %i(index create new)
 
   def index
+    @goals = Goal.last(10)
   end
 
   def show
