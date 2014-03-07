@@ -9,14 +9,12 @@
 
 %div
   Affirm!
-  = simple_form_for :affirmation, url: goal_affirmations_path(goal) do |f|
-    = f.input :reason, label: 'I will do this too because: '
-    = f.submit "Join #{goal.owner.name}"
+  = render 'affirmations/form', goal: goal, affirmation: Affirmation.new
 
 %div
   Affirmations:
   - goal.affirmations.each do |affirmation|
     %p
-      #{affirmation.owner.name}
+      #{affirmation.affirmer.name}
       wants to #{goal.name}
       because #{affirmation.reason}

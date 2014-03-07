@@ -5,11 +5,27 @@ class AffirmationsController < ApplicationController
   end
 
   def create
+    @affirmation = Affirmation.new(affirmation_params) do |a|
+      a.affirmer = current_user
+      a.goal = @goal
+    end
+
+    if @affirmation.save
+      redirect_to @goal
+    else
+      render 'affirmations/new', goal: @goal, affirmations: @affirmations
+    end
   end
 
   def update
   end
 
   def destroy
+  end
+
+private
+
+  def affirmation_params
+    params.require(:affirmation).permit(:reason)
   end
 end
