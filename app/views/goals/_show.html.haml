@@ -7,15 +7,3 @@
   With
   %var= goal.critical_mass
   others
-
-%div
-  Affirm!
-  = render 'affirmations/form', goal: goal, affirmation: Affirmation.new
-
-%div
-  Affirmations:
-  - goal.affirmations.each do |affirmation|
-    %p
-      #{affirmation.affirmer.name}
-      wants to #{goal.name}
-      because #{affirmation.reason}
