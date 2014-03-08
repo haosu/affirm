@@ -2,3 +2,8 @@
  *= require_self
  *= require normalize-rails
  */
+
+@import 'compass';
+@import 'susy';
+
+@import 'global';
