@@ -1,0 +1,7 @@
+header {
+  @include trailer(1);
+
+  border-bottom: rhythm(1 / 2) solid $border-color;
+  height: rhythm(2);
+  width: span(100%);
+}
