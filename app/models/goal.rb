@@ -1,6 +1,7 @@
 class Goal < ActiveRecord::Base
   belongs_to :owner, class_name: 'User'
 
+  has_many :goals
   has_many :affirmations
   has_many :posts
 
