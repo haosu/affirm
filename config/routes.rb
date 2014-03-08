@@ -6,5 +6,6 @@ Affirm::Application.routes.draw do
   resources :users
   resources :goals do
     resources :affirmations, only: %i(index create edit destroy)
+    resources :posts, only: %i(create destroy)
   end
 end
