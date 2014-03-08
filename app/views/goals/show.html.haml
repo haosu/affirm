@@ -11,3 +11,13 @@
       #{affirmation.affirmer.name}
       wants to #{@goal.name}
       because #{affirmation.reason}
+
+%div
+  Posts
+  = render 'posts/form', post: Post.new
+  - @goal.posts.each do |post|
+    %p
+      %p
+        #{post.owner.name}
+      %p
+        #{post.content}

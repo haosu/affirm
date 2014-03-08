@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   before_filter { set_goal(:goal_id) }
 
+  def show
+    redirect_to @goal
+  end
+
   def create
     post = Post.new(post_params) do |p|
       p.owner = current_user
@@ -21,6 +25,6 @@ class PostsController < ApplicationController
 private
 
   def post_params
-    params.require(:post).permit(:body)
+    params.require(:post).permit(:content)
   end
 end

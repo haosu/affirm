@@ -2,6 +2,7 @@ class Goal < ActiveRecord::Base
   belongs_to :owner, class_name: 'User'
 
   has_many :affirmations
+  has_many :posts
 
   validates :owner,         presence: true
   validates :name,          presence: true
