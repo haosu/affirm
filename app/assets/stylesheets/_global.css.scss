@@ -1,0 +1,14 @@
+body {
+  @include container;
+
+  background-color: $background-color;
+  color: $font-color;
+  font-family: times, serif;
+  text-align: center;
+}
+
+a {
+  color: $link-color;
+  font-style: italic;
+  text-decoration: none;
+}
