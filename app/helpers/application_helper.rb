@@ -12,4 +12,7 @@ module ApplicationHelper
     html.html_safe
   end
 
+  def avatar(user)
+    render 'shared/avatar'
+  end
 end

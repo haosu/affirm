@@ -2,6 +2,22 @@ header {
   @include trailer(1);
 
   border-bottom: rhythm(1 / 2) solid $border-color;
-  height: rhythm(2);
   width: span(100%);
+}
+
+nav {
+  width: span(89em);
+
+  .nav-home-link {
+    float: left;
+  }
+
+  .nav-my-goals {
+    float: right;
+  }
+
+  .nav-user-bubble {
+    margin: auto;
+    width: 5em;
+  }
 }
