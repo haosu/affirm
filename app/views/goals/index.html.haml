@@ -1,5 +1,5 @@
 = render 'goals/form', goal: Goal.new
 
-%div
+.goals-list
   - @goals.each do |goal|
     = render 'goals/show', goal: goal

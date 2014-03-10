@@ -1,5 +1,6 @@
-= simple_form_for goal do |f|
-  = f.input :name, label: 'I want to'
-  = f.input :reason, label: 'Why do you want to do this?'
-  = f.input :critical_mass, label: 'How many people do you want to do this with?'
-  = f.submit 'Get started!'
+.goals-form
+  = simple_form_for goal do |f|
+    = f.input :name, label: 'I want to'
+    = f.input :reason, label: 'Why do you want to do this?'
+    = f.input :critical_mass, label: 'How many people do you want to do this with?'
+    = f.submit 'Get started!'

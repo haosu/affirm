@@ -1,9 +1,11 @@
-%h1
-  = link_to goal.name, goal
+.goal
+  %h1.goal-title
+    = link_to goal.name, goal
 
-%p= goal.reason
+  .goal-reason
+    %p= goal.reason
 
-%div
-  With
-  %var= goal.critical_mass
-  others
+  .goal-critical-mass
+    With
+    %var= goal.critical_mass
+    others
