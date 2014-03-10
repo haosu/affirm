@@ -1,7 +1,8 @@
 %header
   %nav
-    = link_to 'Home', goals_path, class: 'nav-home-link'
-    = link_to 'My Goals', user_path(current_user), class: 'nav-my-goals'
-    .nav-user-bubble
-      = avatar(current_user)
-    = link_to 'Log out', destroy_user_session_path, method: :delete
+    .nav-inner
+      = link_to 'Home', goals_path, class: 'nav-home-link'
+      = link_to 'My Goals', user_path(current_user), class: 'nav-my-goals'
+      .nav-user-bubble
+        = avatar(current_user)
+      = link_to 'Log out', destroy_user_session_path, method: :delete

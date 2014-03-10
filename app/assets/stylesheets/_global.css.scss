@@ -1,1 +1,7 @@
+.body-inner  {
+  @extend %inner-container;
+}
+
+.nav-inner {
+  @extend %inner-container;
 }

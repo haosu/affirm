@@ -1,12 +1,13 @@
 /*
- *= require_self
  *= require normalize-rails
+ *= require_self
  */
 
 @import 'compass';
 @import 'susy';
 
 @import 'colors';
+@import 'mixins';
 @import 'base';
 
 @import 'shared';
