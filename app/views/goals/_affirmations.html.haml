@@ -1,0 +1,7 @@
+.affirmations-container
+  = render 'affirmations/form', goal: @goal, affirmation: Affirmation.new
+
+  Affirmations:
+  .affirmations-list
+    - @goal.affirmations.each do |affirmation|
+      = render 'affirmations/show', affirmation: affirmation

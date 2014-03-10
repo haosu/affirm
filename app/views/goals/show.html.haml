@@ -1,15 +1,5 @@
 = render 'goals/show', goal: @goal
 
-%div
-  Affirm!
-  = render 'affirmations/form', goal: @goal, affirmation: Affirmation.new
-
-%div
-  Affirmations:
-  - @goal.affirmations.each do |affirmation|
-    %p
-      #{affirmation.affirmer.name}
-      wants to #{@goal.name}
-      because #{affirmation.reason}
+= render 'goals/affirmations'
 
 = render 'goals/posts'
