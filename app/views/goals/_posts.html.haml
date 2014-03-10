@@ -1,0 +1,6 @@
+.posts-container
+  Posts
+  = render 'posts/form', post: Post.new
+  .posts-list
+    - @goal.posts.each do |post|
+      = render 'posts/show', post: post
