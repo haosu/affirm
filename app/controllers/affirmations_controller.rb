@@ -12,6 +12,7 @@ class AffirmationsController < ApplicationController
 
     if @affirmation.save
       CreatePostFromAffirmationService.new(@affirmation).call
+      EmailGoalAffirmersService.new(@goal).call
       redirect_to @goal
     else
       render 'affirmations/new', goal: @goal, affirmations: @affirmations

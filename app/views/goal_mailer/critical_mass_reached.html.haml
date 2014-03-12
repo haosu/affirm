@@ -1,0 +1,12 @@
+%h1
+  Critical mass reached!
+
+%p
+  Your critical mass for #{@goal.name} has been reached!
+
+%p
+  #{pluralize(@goal.critical_mass, 'other')} other want to do it with you.
+
+%p
+  = link_to 'Head back', goal_url(@goal)
+  and check it out.

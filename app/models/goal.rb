@@ -3,6 +3,7 @@ class Goal < ActiveRecord::Base
 
   has_many :goals
   has_many :affirmations
+  has_many :affirmers, through: :affirmations
   has_many :posts
 
   validates :owner,         presence: true

@@ -28,17 +28,18 @@ Rails.application.configure do
   config.assets.debug = true
 
     config.action_mailer.smtp_settings = {
-      :address   => "smtp.mandrillapp.com",
-      :port      => 587,
-      :user_name => 'me@haosu.org',
-      :password  => 'RarABS4fRPIJRE_aF64DtQ'
+      address:        'smtp.mandrillapp.com',
+      port:           587,
+      user_name:      'me@haosu.org',
+      password:       'RarABS4fRPIJRE_aF64DtQ',
+      authentication: 'login',
     }
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.raise_delivery_errors = true
   # Send email in development mode.
-  config.action_mailer.perform_deliveries = false
+  config.action_mailer.perform_deliveries = true
 
 
   # Adds additional error checking when serving assets at runtime.
