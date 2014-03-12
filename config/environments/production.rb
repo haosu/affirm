@@ -70,13 +70,13 @@ Rails.application.configure do
   config.i18n.fallbacks = true
 
   # Send deprecation notices to registered listeners.
-  config.active_support.deprecation = :notify  
+  config.active_support.deprecation = :notify
 
     config.action_mailer.smtp_settings = {
       :address   => "smtp.mandrillapp.com",
       :port      => 587,
-      :user_name => ENV["MANDRILL_USERNAME"],
-      :password  => ENV["MANDRILL_APIKEY"]
+      :user_name => 'me@haosu.org',
+      :password  => 'RarABS4fRPIJRE_aF64DtQ'
     }
   # ActionMailer Config
   config.action_mailer.default_url_options = { :host => 'example.com' }
