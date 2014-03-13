@@ -1,3 +1,23 @@
 .goal {
   @extend %entity-container;
 }
+
+.goal-card {
+  width: 50%;
+  margin: rhythm(1) auto;
+}
+
+.goal-card-owner-image {
+  float: left;
+  margin: rhythm(-1) 1em 0 1em;
+  margin-top: rhythm(-1);
+}
+
+.goal-card-owner-name {
+  text-align: left;
+}
+
+.goal-card-inner {
+  background-color: white;
+  border: 1px solid darkgrey;
+}

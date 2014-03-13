@@ -1,0 +1,17 @@
+.goal-card
+  .goal-card-floater
+    .goal-card-owner-image
+      = avatar(goal.owner)
+    .goal-card-owner-name
+      #{goal.owner.name} wants to
+  .goal-card-inner
+    %h1.goal-card-title
+      = link_to goal.name, goal
+
+    .goal-card-reason
+      %p= goal.reason
+
+    .goal-card-critical-mass
+      With
+      %var= goal.critical_mass
+      others
