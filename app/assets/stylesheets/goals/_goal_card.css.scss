@@ -1,0 +1,25 @@
+.goal-card {
+  width: 75%;
+  margin: rhythm(3) auto;
+  text-align: left;
+}
+
+.goal-card-owner-image {
+  float: left;
+  margin: rhythm(-1) rhythm(1) 0 rhythm(1);
+  margin-top: rhythm(-1 / 2);
+}
+
+.goal-card-owner-name {
+}
+
+.goal-card-inner {
+  background-color: white;
+  border-top: 1px solid darkgrey;
+  padding: rhythm(1);
+  padding-top: rhythm(1 / 2)
+}
+
+.goal-card-critical-mass {
+  text-align: right;
+}
