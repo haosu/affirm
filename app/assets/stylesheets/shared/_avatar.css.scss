@@ -3,6 +3,16 @@
 
   background-color: black;
   display: inline-block;
-  height: 5em;
-  width: 5em;
+  height: rhythm(2);
+  width: rhythm(2);
+
+  &.small {
+    height: rhythm(1);
+    width: rhythm(1);
+  }
+
+  &.large {
+    height: rhythm(3);
+    width: rhythm(3);
+  }
 }
