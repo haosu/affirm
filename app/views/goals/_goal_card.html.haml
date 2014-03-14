@@ -16,5 +16,6 @@
 
     .goal-card-critical-mass
       With
-      %var= goal.critical_mass
-      others
+      = link_to goal do
+        %var= goal.critical_mass
+        others
