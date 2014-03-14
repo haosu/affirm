@@ -1,8 +1,16 @@
 .goal
+  I want to
   %h1.goal-title
-    = link_to goal.name, goal
+    #{goal.name}
+
+  .goal-owner-image
+    = link_to goal.owner do
+      = avatar(goal.owner)
+      %h2
+        #{goal.owner.name}
 
   .goal-reason
+    %p because
     %p= goal.reason
 
   .goal-critical-mass
