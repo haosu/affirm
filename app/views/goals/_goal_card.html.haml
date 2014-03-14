@@ -1,9 +1,12 @@
 .goal-card
-  .goal-card-owner-image
-    = avatar(goal.owner)
   .goal-card-floater
+    .goal-card-owner-image
+      = link_to goal.owner do
+        = avatar(goal.owner)
     .goal-card-owner-name
-      #{goal.owner.name} wants to
+      = link_to goal.owner do
+        #{goal.owner.name}
+      wants to
   .goal-card-inner
     %h1.goal-card-title
       = link_to goal.name, goal
