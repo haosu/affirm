@@ -1,3 +1,5 @@
 %inner-container {
+  @include container;
+
   margin: auto;
 }

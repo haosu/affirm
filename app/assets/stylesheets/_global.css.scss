@@ -1,9 +1,8 @@
-.body-inner  {
+.inner {
   @extend %inner-container;
 }
 
-.nav-inner {
-  @extend %inner-container;
-
+nav {
   width: 60%;
+  margin: auto;
 }
