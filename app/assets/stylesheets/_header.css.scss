@@ -1,8 +1,10 @@
 header {
   @include trailer(1);
 
-  border-bottom: rhythm(1 / 2) solid $border-color;
-  width: span(100%);
+  background-color: $background-color;
+  border-bottom: rhythm(1 / 2) solid $border-color-dark;
+  position: fixed;
+  width: 100%;
 }
 
 nav {

@@ -1,3 +1,7 @@
 .inner {
   @extend %inner-container;
 }
+
+.content {
+  padding-top: rhythm(5);
+}
