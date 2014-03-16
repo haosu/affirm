@@ -12,10 +12,18 @@ class Goal < ActiveRecord::Base
   validates :critical_mass, presence: true
 
   def can_affirm_by?(user)
-    !(owner == user || affirmed_by?(user))
+    !(is_owned_by?(user) || affirmed_by?(user))
   end
 
   def affirmed_by?(user)
     affirmers.include?(user)
+  end
+
+  def can_post_by?(user)
+    affirmed_by?(user) || is_owned_by?(user)
+  end
+
+  def is_owned_by?(user)
+    owner == user
   end
 end

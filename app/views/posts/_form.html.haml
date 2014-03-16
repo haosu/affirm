@@ -1,4 +1,4 @@
-- if @goal.affirmed_by?(current_user)
+- if @goal.can_post_by?(current_user)
   .post-form
     = simple_form_for post, url: goal_posts_path(@goal) do |f|
       = f.input :content, label: 'How are you doing?'
