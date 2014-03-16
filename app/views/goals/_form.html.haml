@@ -1,6 +1,14 @@
 .goals-form
   = simple_form_for goal do |f|
-    = f.input :name, label: 'I want to', placeholder: 'acheive greatness'
-    = f.text_area :reason, placeholder: 'Why do you want to do this?'
-    = f.input :critical_mass, label: 'How many people do you want to do this with?'
-    = f.submit 'Get started!'
+    = f.label :name, 'I want to'
+    = f.input :name, label: '', placeholder: 'acheive greatness'
+    .goals-form-additional-info
+      = f.label :reason, 'because'
+      .goals-form-reason
+        = f.text_area :reason, placeholder: 'Why do you want to do this?'
+      .goals-form-critical-mass
+        = f.label :critical_mass, 'with'
+        = f.input :critical_mass, label: ''
+        other people
+
+      = f.submit 'Get started!'
