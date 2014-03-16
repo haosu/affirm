@@ -2,6 +2,9 @@
   = render 'affirmations/form', goal: @goal, affirmation: Affirmation.new
 
   Affirmations:
-  .affirmations-list
-    - @goal.affirmations.each do |affirmation|
-      = render 'affirmations/show', affirmation: affirmation
+  - if @goal.affirmations.empty?
+    No one has helped yet T___T
+  - else
+    .affirmations-list
+      - @goal.affirmations.each do |affirmation|
+        = render 'affirmations/show', affirmation: affirmation
