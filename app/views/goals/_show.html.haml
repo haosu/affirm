@@ -15,5 +15,10 @@
 
   .goal-critical-mass
     With
+    %var= goal.affirmers.count
+    out of
     %var= goal.critical_mass
     others
+
+  .goal-affirmer-progress-bar
+    = progress_bar(goal.affirmers.count, goal.critical_mass)

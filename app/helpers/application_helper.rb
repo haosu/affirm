@@ -15,4 +15,9 @@ module ApplicationHelper
   def avatar(user)
     render 'shared/avatar'
   end
+
+  def progress_bar(progress, total)
+    render 'shared/progress_bar',
+      percentage: number_to_percentage(progress.to_f/total*100, precision: 2)
+  end
 end
