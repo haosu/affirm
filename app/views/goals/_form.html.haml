@@ -1,4 +1,4 @@
-.goals-form
+.goals-form{ 'data-view' => 'GoalFormView' }
   = simple_form_for goal do |f|
     = f.label :name, 'I want to'
     = f.input :name, label: '', placeholder: 'acheive greatness'
