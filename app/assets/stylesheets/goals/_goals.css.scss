@@ -1,3 +1,7 @@
+.goal-show-container {
+  @include trailer(2);
+}
+
 .goal-affirmer-progress-bar {
   margin: auto;
   width: 50%;
