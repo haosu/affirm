@@ -2,7 +2,4 @@
 %p
   Email: #{@user.email if @user.email}
 
-.goals
-  %h3 My Goals
-  - @goals.each do |goal|
-    = render 'goals/show', goal: goal
+= render 'goals/index'
