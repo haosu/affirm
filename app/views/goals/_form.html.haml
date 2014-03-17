@@ -5,7 +5,10 @@
     .goals-form-additional-info
       = f.label :reason, 'because'
       .goals-form-reason
-        = f.text_area :reason, placeholder: 'Why do you want to do this?'
+        = f.input :reason,
+          label: '',
+          placeholder: 'Why do you want to do this?',
+          rows: 3
       .goals-form-critical-mass
         = f.label :critical_mass, 'with'
         = f.input :critical_mass, label: ''

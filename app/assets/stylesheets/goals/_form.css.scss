@@ -1,0 +1,31 @@
+.goals-form {
+  margin: auto;
+  width: 75%;
+}
+
+.goals-form-additional-info {
+  &.closed {
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+.goal_name,
+.goals-form-reason,
+.goals-form-critical-mass {
+  @include trailer(1);
+}
+
+#goal_name {
+  @include adjust-font-size-to(40px);
+  width: 75%;
+}
+
+#goal_reason {
+  resize: none;
+  width: 100%;
+}
+
+#goal_critical_mass {
+  width: 4em;
+}

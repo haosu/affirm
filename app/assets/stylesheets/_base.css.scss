@@ -10,3 +10,11 @@ a {
   font-style: italic;
   text-decoration: none;
 }
+
+input[type=text],
+input[type=number],
+textarea {
+  @include adjust-font-size-to(20px);
+  border: none;
+  text-align: center;
+}

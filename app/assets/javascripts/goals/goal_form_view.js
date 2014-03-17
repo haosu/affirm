@@ -5,10 +5,10 @@ Affirm.Views.GoalFormView = Backbone.View.extend({
 
   initialize: function() {
     this.$additionalInfo = this.$('.goals-form-additional-info');
-    this.$additionalInfo.hide();
+    this.$additionalInfo.addClass('closed')
   },
 
   showAdditionalInfo: function() {
-    this.$additionalInfo.show();
+    this.$additionalInfo.removeClass('closed')
   }
 });
