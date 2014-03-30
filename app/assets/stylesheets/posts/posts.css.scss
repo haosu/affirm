@@ -1,0 +1,19 @@
+.post {
+  @extend %clearfix;
+
+  margin: rhythm(2) auto 0;
+  width: 75%;
+  text-align: left;
+}
+
+.post-avatar {
+  display: inline-block;
+  float: left;
+  margin-right: 1em;
+}
+
+.post-info {
+  border-left: 1px solid $border-color;
+  margin-left: 4em;
+  padding-left: 1em;
+}

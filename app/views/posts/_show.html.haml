@@ -1,5 +1,8 @@
 .post
-  .post-owner-name
-    #{post.owner.name}
-  .post-content
-    #{post.content}
+  .post-avatar
+    = avatar(post.owner)
+  .post-info
+    %h3.post-owner-name
+      #{post.owner.name}
+    .post-content
+      #{post.content}
