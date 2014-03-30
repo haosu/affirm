@@ -7,4 +7,4 @@
   - else
     .affirmations-list
       - @goal.affirmations.each do |affirmation|
-        = render 'affirmations/show', affirmation: affirmation
+        = avatar(affirmation.affirmer)
