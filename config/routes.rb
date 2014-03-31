@@ -1,7 +1,8 @@
 Affirm::Application.routes.draw do
   root :to => "home#index"
   devise_for :users, controllers: { registrations: 'registrations',
-                                    sessions: 'sessions' }
+                                    sessions: 'sessions',
+                                    omniauth_callbacks: 'users/omniauth_callbacks' }
 
   resources :users
   resources :goals do
