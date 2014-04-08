@@ -5,6 +5,7 @@
   display: inline-block;
   height: rhythm(2);
   width: rhythm(2);
+  overflow: hidden;
 
   &.small {
     height: rhythm(1);

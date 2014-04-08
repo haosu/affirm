@@ -13,7 +13,7 @@ module ApplicationHelper
   end
 
   def avatar(user)
-    render 'shared/avatar'
+    render 'shared/avatar', locals: { user: user }
   end
 
   def progress_bar(progress, total)
