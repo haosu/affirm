@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   def self.find_for_facebook_oauth(auth)
     auth[:email] = auth.info.email
 
-    user = where(auth.slice(:provider, :uid, :email))
+    user = where(auth.slice(:provider, :uid, :email)).first
 
     return user if user
 
